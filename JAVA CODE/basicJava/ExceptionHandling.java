@@ -15,8 +15,13 @@ public class ExceptionHandling {
 		try {
 			int num1 = sc.nextInt();
 			int num2 = sc.nextInt();
-			int div = num1 / num2;
-			System.out.println("Answer: " + div);
+			div(num1,num2);
+//			int div = num1 / num2;
+//			System.out.println("Answer: " + div);
+		}
+		catch(IllegalArgumentException e)
+		{
+			System.out.println("Inside IllegalArgumentException catch block");
 		}
 //		catch (Exception e) {
 //			System.out.println("All exceptions are caught here.");
@@ -34,5 +39,11 @@ public class ExceptionHandling {
 		System.out.println("End of program");
 
 	}
+	
+	public static void div(int a,int b) throws IllegalArgumentException
 
+	{
+		System.out.println(a/b);
+		throw new IllegalArgumentException("Manually thrown exception");
+	}
 }
