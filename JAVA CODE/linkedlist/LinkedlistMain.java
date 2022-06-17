@@ -11,6 +11,12 @@ public class LinkedlistMain {
 		Node.insertNodeAtEnd(head, 60);
 		
 		Node.printLinkedList(head);
+		
+		head=Node.deleteNode(head, 1);
+		Node.printLinkedList(head);
+		
+		Node.insertAtPos(head, 100, 3);
+		Node.printLinkedList(head);
 
 	}
 
