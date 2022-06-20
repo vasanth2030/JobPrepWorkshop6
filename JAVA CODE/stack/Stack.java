@@ -14,21 +14,42 @@ public class Stack {
 	
 	public void push(int data)
 	{
-		
+		if(top==capacity-1)
+		{
+			System.out.println("Stack overflow.");
+		}
+		else
+		{
+			top++;
+			arr[top]=data;
+		}
 	}
 	
 	public void pop()
 	{
-		
+		if(top==-1)
+		{
+			System.out.println("Stack is empty.");
+		}
+		else {
+			top--;
+		}
 	}
 	
 	public int peek()
 	{
-		return -1;
+		if(top==-1)
+			return -1;
+		else
+			return arr[top];
 	}
 
 	public void printStack()
 	{
-		
+		for(int i=top;i>=0;i--)
+		{
+			System.out.print(arr[i]+" <-- ");
+		}
+		System.out.println();
 	}
 }
